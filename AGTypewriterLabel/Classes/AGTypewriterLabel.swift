@@ -35,14 +35,14 @@ public enum AGTypewriterAnimation {
     case pause(length:TimeInterval)
 }
 
-public class AGTypewriterLabel: UILabel {
+open class AGTypewriterLabel: UILabel {
     
     public var delegate : AGTypewriterLabelDelegate?
     private var defaultCharInterval : TimeInterval = 0.1
     private var animations = [AGTypewriterAnimation]()
     private let dispatchQueue = DispatchQueue(label: "AGTypewriterLabelQueue")
     
-    override public var text : String! {
+    override open var text : String! {
         get {
             return super.text
         }
